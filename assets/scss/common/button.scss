@@ -1,0 +1,33 @@
+.button {
+    &__btn{
+        font-family: "Barlow Semi Condensed", sans-serif;
+        display: inline-block;
+        padding: 0.8rem 3.2rem;
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-align: center;
+        text-decoration: none;
+        color: $color-btn-dark;
+        background-color: $bg-btn;
+        font-style: italic;
+        border-radius: 100px;
+        transition: all 0.3s ease;
+        line-height: 2.4rem;
+
+        &.primary {
+            &:hover {
+                background-color: $bg-btn-hover;
+            }
+        }
+
+        &.secondary {
+            background-color: transparent;
+            color: $color-btn-light;
+            outline: 1px solid $color-btn-border;
+
+            &:hover {
+                outline-color: $color-btn-border-hover;
+            }
+        }
+    }
+}
