@@ -23,6 +23,7 @@
         overflow: auto;
         ul{
             display: flex;
+            gap: .6rem;
             li{
                 a {
                     display: inline-block;
@@ -34,7 +35,7 @@
                     color: $color-light;
                     line-height: 2.4rem;
     
-                    &:hover{
+                    &:hover, &.router-link-active{
                         background-color: $bg-menu-active;
                         color: $color-menu-active;
                         border-radius: 100px;
