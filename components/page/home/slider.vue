@@ -6,18 +6,17 @@ onMounted(() => {});
 <template>
   <ClientOnly>
     <swiper-container
-      :autoplay="{
-        delay: 4000,
-        disableOnInteraction: false,
-      }"
+
       :pagination="{
         clickable: true,
       }"
     >
       <swiper-slide v-for="(slide, idx) in slides" :key="idx">
-        <nuxt-link to="/"
+        <div class="item__slide">
+            <nuxt-link to="/"
           ><img src="/images/slider/item1.png" alt="img-slide"
         /></nuxt-link>
+        </div>
       </swiper-slide>
     </swiper-container>
   </ClientOnly>
@@ -25,8 +24,11 @@ onMounted(() => {});
 
 <style lang="scss" scoped>
 swiper-slide {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
   height: 28.125vw;
-  min-height: 200px;
 }
 
 swiper-container::part(bullet),
@@ -40,5 +42,18 @@ swiper-container::part(bullet-active) {
 
 swiper-container::part(bullet-active) {
   background-color: $bg-active;
+}
+.item__slide{
+    width: 100%;
+    a{
+        display: inline-block;
+        width: 100%;
+
+        > img{
+            width: 100%;
+            // height: 100%;
+            margin-bottom: -100px;
+        }
+    }
 }
 </style>
