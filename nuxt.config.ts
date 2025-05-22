@@ -3,12 +3,7 @@ export default defineNuxtConfig({
   css: ['@/assets/scss/main.scss'],
   ssr: true,
   app: {
-    baseURL: 'Test_04', 
-  },
-  nitro: {
-    prerender: {
-      routes: ['/post/abc', '/post/xyz']
-    }
+    baseURL: '/Test_04/', 
   },
   vite: {
     css: {
