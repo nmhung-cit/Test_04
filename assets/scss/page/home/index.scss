@@ -1,0 +1,42 @@
+.home{
+    &__wrapper{
+        padding: 8rem 4rem;
+    }
+    &__content{
+        max-width: $size-container;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &__selection_new{
+        margin-bottom: 8rem;
+    }
+
+    &__selection_ntf{
+        display: flex;
+        gap: 2.65rem;
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
+        &--drops{
+            width: calc(100% - 52.5rem);
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+            :deep(){
+                swiper-slide{
+                    height: 24rem;
+                }
+            }
+        }
+
+        &--item{
+            min-width: 52.5rem;
+            display: flex;
+            gap: 2.65rem;
+            @media screen and (max-width: 1024px) {
+                min-width: auto;
+            }
+        }
+    }
+}
