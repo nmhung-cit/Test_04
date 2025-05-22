@@ -1,6 +1,9 @@
 .footer{
     padding: 4rem;
     border-top: 1px solid $color-border;
+    @media screen and (max-width: $size-screen-sm) {
+        padding: 4rem 2rem;
+    }
 
     &__wrap{
         max-width: $size-container;
@@ -9,18 +12,24 @@
 
     &__content{
         display: flex;
-        gap: 2rem;
-        @media screen and (max-width: 1024px) {
+        gap: 3rem 2rem;
+        @media screen and (max-width: $size-screen) {
             justify-content: space-between;
+        }
+        @media screen and (max-width: $size-screen-sm) {
+            flex-wrap: wrap;
         }
     }
 
     &__item{
         &:not(:last-child){
             margin-right: 15%;
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: $size-screen) {
                 margin-right: 0;
             }
+        }
+        @media screen and (max-width: $size-screen-sm) {
+           width: calc(100% / 2 - 10px);
         }
     }
 
@@ -44,6 +53,10 @@
                 padding: .4rem 0;
                 color: $color-light;
                 line-height: 2rem;
+
+                @media screen and (max-width: $size-screen-sm) {
+                    font-size: 1.2rem;
+                 }
             }
         }
     }

@@ -64,6 +64,21 @@ const itemNtfPromotion = reactive([
     },
 ])
 
+const isMobile = ref(false)
+
+const checkIsMobile = () => {
+  isMobile.value = window.innerWidth < 768
+}
+
+onMounted(() => {
+  checkIsMobile()
+  window.addEventListener('resize', checkIsMobile)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkIsMobile)
+})
+
 </script>
 
 <template>
@@ -73,7 +88,7 @@ const itemNtfPromotion = reactive([
         <div class="home__wrapper">
             <div class="home__content">
                 <div class="home__selection_new">
-                    <sectionSlider title="New NFT Collections" :is-show-slider="true" :item-content="itemContentNew" />
+                    <sectionSlider title="New NFT Collections" :is-show-slider="true" :item-content="itemContentNew" :spaceBetween="isMobile ? 3 : 16" />
                 </div>
                 <div class="home__selection_ntf">
                     <div class="home__selection_ntf--drops">

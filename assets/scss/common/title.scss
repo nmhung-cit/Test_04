@@ -5,4 +5,8 @@
     font-style: italic;
     color: $color-title;
     text-transform: uppercase;
+
+    @media screen and (max-width: $size-screen-sm) {
+        font-size: 2.4rem;
+    }
 }

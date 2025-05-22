@@ -1,6 +1,9 @@
 .home{
     &__wrapper{
         padding: 8rem 4rem;
+        @media screen and (max-width: $size-screen-sm) {
+            padding: 4rem 2rem;
+        }
     }
     &__content{
         max-width: $size-container;
@@ -10,22 +13,38 @@
 
     &__selection_new{
         margin-bottom: 8rem;
+        @media screen and (max-width: $size-screen-sm) {
+            margin-bottom: 4rem;
+
+            :deep(){
+                .item__slide{
+                    a {
+                        >img {
+                            width: 10.2rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__selection_ntf{
         display: flex;
         gap: 2.65rem;
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: $size-screen) {
             flex-direction: column;
         }
         &--drops{
             width: calc(100% - 52.5rem);
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: $size-screen) {
                 width: 100%;
             }
             :deep(){
                 swiper-slide{
                     height: 24rem;
+                    @media screen and (max-width: $size-screen) {
+                        height: 18rem;
+                    }
                 }
             }
         }
@@ -34,8 +53,15 @@
             min-width: 52.5rem;
             display: flex;
             gap: 2.65rem;
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: $size-screen) {
                 min-width: auto;
+                .ntf_item{
+                    :deep(){
+                        .item__slide{
+                            max-width: 22rem;
+                        }
+                    }
+                }
             }
         }
     }

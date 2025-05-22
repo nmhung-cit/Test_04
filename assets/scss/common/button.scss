@@ -29,5 +29,10 @@
                 outline-color: $color-btn-border-hover;
             }
         }
+
+        @media screen and (max-width: $size-screen-sm) {
+            line-height: 2rem;
+            padding: 0.8rem 2.4rem;
+        }
     }
 }

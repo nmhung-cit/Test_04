@@ -33,4 +33,12 @@ swiper-container::part(bullet-active) {
             margin-bottom: -100px;
         }
     }
+
+    @media screen and (max-width: $size-screen-sm) {
+        a {
+            >img {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
