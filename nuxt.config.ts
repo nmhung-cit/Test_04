@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   app: {
     baseURL: 'Test_04', 
   },
+  nitro: {
+    prerender: {
+      routes: ['/post/abc', '/post/xyz']
+    }
+  },
   vite: {
     css: {
       preprocessorOptions: {
