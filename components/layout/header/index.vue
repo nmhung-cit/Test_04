@@ -4,10 +4,10 @@ import ButtonComponent from '@/components/common/button.vue';
 const isShowMenu = ref(false);
 const itemsMenu = ref([
     { name: 'Home', path: '/' },
-    { name: 'Items1', path: '/item-1' },
-    { name: 'Items2', path: '/item-2' },
-    { name: 'Items3', path: '/item-3' },
-    { name: 'Items4', path: '/item-4' },
+    { name: 'Items1', path: '/' },
+    { name: 'Items2', path: '/' },
+    { name: 'Items3', path: '/' },
+    { name: 'Items4', path: '/' },
     
 ]);
 

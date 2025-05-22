@@ -6,44 +6,44 @@ import sectionSlider from '@/components/common/sectionSlider.vue';
 const itemContentNew = reactive([
     {
         img: '/images/page/home/new0.png',
-        url: '/item0',
+        url: '/',
         name: 'item0',
     },
     {
         img: '/images/page/home/new1.png',
-        url: '/item1',
+        url: '/',
         name: 'item1',
     },
     {
         img: '/images/page/home/new2.png',
-        url: '/item2',
+        url: '/',
         name: 'item2',
     },
     {
         img: '/images/page/home/new3.png',
-        url: '/item3',
+        url: '/',
         name: 'item3',
     },
     {
         img: '/images/page/home/new4.png',
-        url: '/item4',
+        url: '/',
         name: 'item4',
     },
     {
         img: '/images/page/home/new5.png',
-        url: '/item5',
+        url: '/',
         name: 'item5',
     },
 ]);
 const itemNtfDrops = reactive([
     {
         img: '/images/page/home/nft1.png',
-        url: '/item1',
+        url: '/',
         name: 'item1',
     },
     {
         img: '/images/page/home/nft1.png',
-        url: '/item2',
+        url: '/',
         name: 'item2',
     },
 ])
@@ -51,7 +51,7 @@ const itemNtfDrops = reactive([
 const itemNtfHot = reactive([
     {
         img: '/images/page/home/nft2.png',
-        url: '/item1',
+        url: '/',
         name: 'item1',
     },
 ])
@@ -59,7 +59,7 @@ const itemNtfHot = reactive([
 const itemNtfPromotion = reactive([
     {
         img: '/images/page/home/nft3.png',
-        url: '/item1',
+        url: '/',
         name: 'item1',
     },
 ])
