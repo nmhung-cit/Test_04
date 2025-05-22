@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   css: ['@/assets/scss/main.scss'],
   ssr: true,
   app: {
-    baseURL: '/Test_04', 
+    baseURL: '/Test_04/', 
   },
   vite: {
     css: {
