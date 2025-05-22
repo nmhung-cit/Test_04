@@ -14,7 +14,7 @@ import { data } from "./footer.data";
               v-for="(subItem, subIndex) in item.content"
               :key="subIndex"
             >
-              <nuxt-link to="/"
+              <nuxt-link :to="subItem?.url"
                 ><span v-if="subItem?.name">{{ subItem.name }}</span
                 ><img v-else :src="subItem.icon" alt="icon"
               /></nuxt-link>

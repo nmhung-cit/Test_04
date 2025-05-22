@@ -40,7 +40,7 @@ watch(isShowMenu, (val) => {
     <div class="header">
         <div class="header__wrap">
             <div class="header__left">
-                <div class="header__action_menu" @click="isShowMenu = !isShowMenu">
+                <div class="header__action_menu is__mobile" @click="isShowMenu = !isShowMenu">
                     <img v-show="!isShowMenu" src="/images/icon/hamburger.svg" alt="icon_open" />
                     <img v-show="isShowMenu" src="/images/icon/menu_close.svg" alt="icon_close" />
                 </div>
