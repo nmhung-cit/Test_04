@@ -1,17 +1,35 @@
 $bg-main: #131415;
+$bg-primary: #FFFFFF99;
+$bg-secondary: #1F2023;
 $color-main: #ffffff;
+$bg-active: #FFC700;
+
 
 $color-light: #D2D2D2;
 $color-dark: #1F1F1F;
 
-// border
+// btn
 $bg-btn: #FFC700;
 $bg-btn-hover: #C79B12;
 $color-btn-light: #D2D2D2;
 $color-btn-dark: #1F1F1F;
 $color-btn-border: #FFC700;
 $color-btn-border-hover: #FFE8AB;
+$bg-btn-secondary: #383A42;
 
 // menu
 $color-menu-active: #FFC700;
 $bg-menu-active: #383A42;
+
+// title
+$color-title: #FFC700;
+
+// border
+$color-border: #383A42;
+
+$size-container: 1128px;
+
+// size screen
+$size-screen: 1024px;
+$size-screen-sm: 768px;
+$size-screen-xs: 576px;

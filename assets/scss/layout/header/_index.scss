@@ -1,29 +1,88 @@
 .header{
+    margin-bottom: 8rem;
+    @media screen and (max-width: $size-screen-sm) {
+        margin-bottom: 6rem;
+    }
     &__wrap{
-        display: flex;
-        align-items: center;
-        padding: 20px 40px;
-        height: 80px;
-        gap: 24px;
-        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        padding: 2rem 4rem;
+        height: 8rem;
+        gap: 2.4rem;
         background-color: $bg-main;
+
+        @media screen and (max-width: $size-screen-sm) {
+            height: 6rem;
+            padding: 1.2rem 2rem;
+        }
+
     }
 
     &__left{
         display: flex;
         align-items: center;
-        gap: 24px;
+        gap: 2.4rem;
+        float: left;
+        width: calc(100% - 250px);
+        @media screen and (max-width: $size-screen-sm) {
+            gap: 1.2rem;
+            min-width: max-content;
+        }
+    }
+
+    &__action_menu{
+        padding: .6rem .6rem .6rem 0;
+        cursor: pointer;
+    }
+
+    &__right{
+        float: right;
     }
 
     &__logo{
         min-width: max-content;
+        >a > img{
+            @media screen and (max-width: $size-screen-sm) {
+                height: 36px;
+            }
+        }
     }
 
     &__nav{
         overflow: auto;
+        @media screen and (max-width: $size-screen-sm) {
+            overflow: visible;
+            position: fixed;
+            top: 6rem;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background-color: $bg-secondary;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+
+            &.is-show{
+                transform: translateX(0);
+            }
+        }
         ul{
             display: flex;
+            gap: .6rem;
+            @media screen and (max-width: $size-screen-sm) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                gap: 1.2rem;
+            }
             li{
+                @media screen and (max-width: $size-screen-sm) {
+                    width: 100%;
+                }
                 a {
                     display: inline-block;
                     font-size: 1.4rem;
@@ -34,10 +93,20 @@
                     color: $color-light;
                     line-height: 2.4rem;
     
-                    &:hover{
+                    &:hover, &.router-link-active{
                         background-color: $bg-menu-active;
                         color: $color-menu-active;
                         border-radius: 100px;
+                    }
+
+                    @media screen and (max-width: $size-screen-sm) {
+                        width: 100%;
+                        padding: 0.8rem 2rem;
+                        line-height: 2rem;
+                        height: 48px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
             } 

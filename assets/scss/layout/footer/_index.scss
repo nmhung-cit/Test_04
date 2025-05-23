@@ -1,0 +1,63 @@
+.footer{
+    padding: 4rem;
+    border-top: 1px solid $color-border;
+    @media screen and (max-width: $size-screen-sm) {
+        padding: 4rem 2rem;
+    }
+
+    &__wrap{
+        max-width: $size-container;
+        margin: 0 auto;
+    }
+
+    &__content{
+        display: flex;
+        gap: 3rem 2rem;
+        @media screen and (max-width: $size-screen) {
+            justify-content: space-between;
+        }
+        @media screen and (max-width: $size-screen-sm) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 15%;
+            @media screen and (max-width: $size-screen) {
+                margin-right: 0;
+            }
+        }
+        @media screen and (max-width: $size-screen-sm) {
+           width: calc(100% / 2 - 10px);
+        }
+    }
+
+    &__title{
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: $color-light;
+        text-transform: uppercase;
+        font-style: italic;
+        color: $color-main;
+        margin-bottom: 1rem;
+    }
+
+    &__list{
+        &__item{
+            a {
+                display: inline-block;
+                font-size: 1.4rem;
+                font-weight: 400;
+                padding: .4rem 0;
+                color: $color-light;
+                line-height: 2rem;
+
+                @media screen and (max-width: $size-screen-sm) {
+                    font-size: 1.2rem;
+                 }
+            }
+        }
+    }
+}

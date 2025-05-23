@@ -1,31 +1,23 @@
 <script setup>
-// Create 10 slides
-const slides = ref(Array.from({ length: 9 }))
-onMounted(() => {
-})
+const slides = ref(Array.from({ length: 9 }));
+onMounted(() => { });
 </script>
 
 <template>
-  <ClientOnly>
-    <swiper-container
-
-    :pagination="{
-      clickable: true,
-    }"
-    >
-      <swiper-slide
-        v-for="(slide, idx) in slides"
-        :key="idx"
-      >
-        <nuxt-link to="/"><img src="/images/slider/item1.png" alt="img-slide"></nuxt-link>
-      </swiper-slide>
+    <client-only>
+        <swiper-container :autoplay="{
+        delay: 4000,
+        disableOnInteraction: false,
+    }" :pagination="{
+        clickable: true,
+    }">
+        <swiper-slide v-for="(slide, idx) in slides" :key="idx">
+            <div class="item__slide">
+                <nuxt-link to="/"><img src="/images/slider/item1.png" alt="img-slide" /></nuxt-link>
+            </div>
+        </swiper-slide>
     </swiper-container>
-  </ClientOnly>
+    </client-only>
 </template>
 
-<style lang="css" scoped>
-swiper-slide {
-  height: 28.125vw;
-  min-height: 200px;
-}
-</style>
+<style scoped lang="scss" src="@/assets/scss/page/home/slider.scss"></style>
