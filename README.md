@@ -73,3 +73,12 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+RESULT
+
+![Screenshot Desktop](assets/desktop.png)
+
+![Screenshot Mobile](assets/mobile.png)
+
+![Screenshot Mobile-meni](assets/open_menu.png)
