@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "homepage": "https://nmhung-cit.github.io/Test_04",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
